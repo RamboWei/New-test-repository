@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            position: relative;
+            padding: 10px;
+        }
+        a:before{
+            position: absolute;
+            top: auto;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            content: '';
+            transition: all 1s;
+            backface-visibility: hidden;
+            transform: scaleX(0);
+
+        }
+        a:hover:before{
+            background-color: indianred;
+            transform: scaleX(1);
+        }
+        ul{
+            width: 100px;
+            height: 60px;
+            background: lightcoral;
+            list-style: none;
+            margin: 60px auto;
+            padding: 0;
+            position: relative;
+        }
+        .li1{
+            height: 2px;
+            position: absolute;
+            top: -10px;
+            width: 100%;
+            backface-visibility: hidden;
+            transform: scaleX(0);
+            transition: all 1.5s;
+        }
+        .li2{
+            width: 2px;
+            position: absolute;
+            right: -40px;
+            height: 100%;
+            backface-visibility: hidden;
+            transform: scaleX(0);
+            transition: all 1.5s;
+            transition-delay: 1.5s;
+        }
+        .li3{
+            height: 2px;
+            position: absolute;
+            bottom: -10px;
+            width: 100%;
+            backface-visibility: hidden;
+            transform: scaleX(0);
+            transition: all 1.5s;
+            transition-delay: 3s;
+        }
+        .li4{
+            width: 2px;
+            position: absolute;
+            left: -40px;
+            height: 100%;
+            backface-visibility: hidden;
+            transform: scaleX(0);
+            transition: all 1.5s;
+            transition-delay: 4.5s;
+        }
+        ul:hover .li1{
+            background-color: peru;
+            transform: scaleX(2);
+        }
+        ul:hover .li2{
+            background-color: blueviolet;
+            transform: scaleY(2);
+        }
+        ul:hover .li3{
+            background-color: deepskyblue;
+            transform: scaleX(2);
+        }
+        ul:hover .li4{
+            background-color: darkseagreen;
+            transform: scaleY(2);
+        }
+        #hide{
+            width: 400px;
+            height: 100px;
+            border: 1px solid red;
+            text-align: left;
+            overflow: hidden;
+            position: relative;
+            line-height: 20px;
+        }
+        #click{
+            position: absolute;
+            top: 76%;
+            left: 88%;
+            padding-left: 2px;
+            border: 1px solid orange;
+            color: chocolate;
+            text-align: left;
+            cursor: pointer;
+            font-weight: 600;
+            width: 42px;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="">周翔宇</a>
+    </div>
+    <ul>
+        <li class="li1"></li>
+        <li class="li2"></li>
+        <li class="li3"></li>
+        <li class="li4"></li>
+    </ul>
+    <div id="hide">
+        <div id="click">More</div>
+        一段测试用的填充内容，没有任何意义。请更多的关注样式而不是这些文字。这段话为啥会被拿来填充内容我也加粗的不知道，不过它肯定会被无视的，所以就随便写点什么好了，就是给你们看个样子的。这些一点意义都没有的内容不是给你们看的，不要看我，看样式，可以不？这些内容都是扯淡的，文字也都是随便写的，并没有什么用——看看就好。写这么多废话也是很费劲的事情，对吧。不管怎么说我写这么多东西都是没有用的。一段测试用的填充内容，没有任何意义链接。请更多的关注样式而不是这些文字。这段话为啥会被拿来填充内容我也不知道，不过它肯定会被无视的，所以就随便写点什么好了，就是给你们看个样子的。这些一点意义都没有的内容不是给你们看的，不要看我，看样式，可以不？这些内容都是扯淡的，文字也都是随便写的，并没有什么用——看看就好。写这么多废话也是很费劲的事情，对吧。不管怎么说我写这么多东西都是没有用的。
+
+    </div>
+</body>
+<script>
+    var dj = document.getElementById('click');
+    var box = document.getElementById('hide');
+    dj.onclick = function (){
+        box.style.height = "auto";
+        dj.style.display = "none";
+    }
+</script>
+</html>
